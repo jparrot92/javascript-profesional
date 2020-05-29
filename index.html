@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>FlinsuuMediaPlayer.js</title>
+    <link 
+      rel="stylesheet" 
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" 
+    />
+    <link rel="stylesheet" href="./assets/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>FlinsuuMediaPlayer.js</h1>
+      <p>An extensible media player.</p>
+    </header>
+
+    <main class="container">
+      <video class="movie">
+        <source src="./assets/BigBuckBunny.mp4" />
+      </video>
+
+      <button>Play/Pause</button>
+    </main>
+
+    <script>
+      // Obtine el elemento video
+      const video = document.querySelector('video');
+      // Obtine el elemento button
+      const button = document.querySelector('button');
+      
+      // Clase media player
+      function MediaPlayer(config) {
+        this.media = config.element
+      }
+
+      // Metodo para reproducir el video
+      MediaPlayer.prototype.play = function () {
+        this.media.play();
+      };
+
+      // Instacia clase MediaPlayer
+      const player = new MediaPlayer({ element: video });
+
+      // Detecta clic al boton
+      button.onclick = () => player.play();
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "flinsuu-media-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jparrot92/javascript-profesional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jparrot92/javascript-profesional/issues"
+  },
+  "homepage": "https://github.com/jparrot92/javascript-profesional#readme",
+  "dependencies": {
+    "-": "0.0.1",
+    "D": "^1.0.0",
+    "live-server": "^1.2.1"
+  }
+}
