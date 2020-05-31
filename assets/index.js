@@ -5,7 +5,12 @@ import AutoPlay from './plugins/AutoPlay.js';
 const video = document.querySelector('video');
 
 // Instacia clase MediaPlayer
-const player = new MediaPlayer({ element: video, plugins: [new AutoPlay()] });
+const player = new MediaPlayer({
+  element: video,
+  plugins: [
+    // new AutoPlay()
+  ] 
+});
 
 // Obtine el elemento play button
 const playButton = document.querySelector('#playButton');
