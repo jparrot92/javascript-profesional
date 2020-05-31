@@ -1,7 +1,16 @@
 // Clase media player
 function MediaPlayer(config) {
   this.media = config.element
+  this.plugins = config.plugins || []
+
+  this._initPlugins();
 }
+
+MediaPlayer.prototype._initPlugins = function() {
+  this.plugins.forEach(plugin => {
+    plugin.run(this);
+  });
+};
 
 // Metodo para reproducir el video
 MediaPlayer.prototype.play = function () {
@@ -20,6 +29,16 @@ MediaPlayer.prototype.togglePlay = function () {
   } else {
     this.pause();
   }
+};
+
+// Metodo para silenciar el video
+MediaPlayer.prototype.mute = function() {
+  this.media.muted = true;
+};
+
+// Metodo para dessilenciar el video
+MediaPlayer.prototype.unmute = function() {
+  this.media.muted = false;
 };
 
 export default MediaPlayer
