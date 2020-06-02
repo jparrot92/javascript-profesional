@@ -1,5 +1,6 @@
 import MediaPlayer from './MediaPlayer.js'
 import AutoPlay from './plugins/AutoPlay.js';
+import AutoPause from './plugins/AutoPause.js';
 
 // Obtine el elemento video
 const video = document.querySelector('video');
@@ -8,7 +9,8 @@ const video = document.querySelector('video');
 const player = new MediaPlayer({
   element: video,
   plugins: [
-    new AutoPlay()
+    new AutoPlay(),
+    new AutoPause()
   ] 
 });
 
