@@ -1,6 +1,7 @@
-import MediaPlayer from './MediaPlayer.js'
-import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from './plugins/AutoPause.ts';
+import MediaPlayer from './MediaPlayer'
+import AutoPlay from './plugins/AutoPlay';
+import AutoPause from './plugins/AutoPause';
+import Ads from './plugins/Ads';
 
 // Obtine el elemento video
 const video = document.querySelector('video');
@@ -10,18 +11,19 @@ const player = new MediaPlayer({
   element: video,
   plugins: [
     new AutoPlay(),
-    new AutoPause()
+    new AutoPause(),
+    new Ads()
   ] 
 });
 
 // Obtine el elemento play button
-const playButton = document.querySelector('#playButton');
+const playButton: HTMLElement = document.querySelector('#playButton');
 
 // Detecta clic al boton play button
 playButton.onclick = () => player.togglePlay();
 
 // Obtine el elemento mute button
-const muteButton = document.querySelector('#muteButton');
+const muteButton: HTMLElement = document.querySelector('#muteButton');
 
 // Detecta clic al boton mute button
 muteButton.onclick = () => {
