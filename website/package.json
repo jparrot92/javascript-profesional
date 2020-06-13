@@ -1,0 +1,32 @@
+{
+  "name": "flinsuu-media-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html ejercicios/index.html ejercicios/**/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jparrot92/javascript-profesional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jparrot92/javascript-profesional/issues"
+  },
+  "homepage": "https://github.com/jparrot92/javascript-profesional#readme",
+  "dependencies": {
+    "-": "0.0.1",
+    "@jparrot92/flinsuumediaplayer": "^1.0.0",
+    "D": "^1.0.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.3"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
